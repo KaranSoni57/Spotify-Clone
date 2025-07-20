@@ -10,8 +10,12 @@
     <div class="navi">
       <nav class="nav">
         <div class="n1">
-          <div class="logo"></div>
-          <div class="home"></div>
+          <div class="logo invert">
+            <img src="Images/spot.svg" alt="" />
+          </div>
+          <div class="home invert">
+            <img src="Images/home.svg" alt="" />
+          </div>
           <div class="search">
             <input
               class="searchbox"
@@ -43,13 +47,10 @@
           <p>It's easy, we will help you</p>
           <button type="button">Create Playlist</button>
         </div>
-        <div class="playlist">
-          <h5>Let's find some podcasts to follow</h5>
-
-          <p>We will keep you updated on new episodes</p>
-          <button type="button">Browse Podcasts</button>
+        <div class="songList">
+          <ul></ul>
         </div>
-        <div class="cred">
+        <!-- <div class="cred">
           <p>Legal</p>
           <p>Safety & Privacy Center</p>
           <p>Privacy Policy</p>
@@ -57,52 +58,101 @@
           <p>About Ads</p>
           <p>Accessibility</p>
           <br />
-        </div>
-        <button class="lang" type="button">English</button>
+        </div> -->
+        <!-- <button class="lang" type="button">English</button> -->
       </div>
       <div class="mPage">
         <h3>Trending Songs</h3>
         <div class="trSongs">
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
+          <div class="song play">
+            <img src="Images/s1.jpeg" alt="" />
+            <div class="infor">
+              <h3>Best Day of My Life</h3>
+              <p>American Authors</p>
+            </div>
+            <div class="playButton">
+              <img src="Images/play.svg" alt="" />
+            </div>
+          </div>
+          <div class="song play">
+            <img src="Images/s2.jpeg" alt="" />
+            <div class="infor">
+              <h3>Sanu Kehndi</h3>
+              <p>Romy, Kumaar</p>
+            </div>
+          </div>
+          <div class="song play">
+            <img src="Images/s3.jpeg" alt="" />
+            <div class="infor">
+              <h3>Sapphire</h3>
+              <p>Ed Sheeran</p>
+            </div>
+          </div>
+          <div class="song play">
+            <img src="Images/s4.jpeg" alt="" />
+            <div class="infor">
+              <h3>I Think They Call This Love</h3>
+              <p>Elliot James Reay</p>
+            </div>
+          </div>
+          <div class="song play">
+            <img src="Images/s5.jpeg" alt="" />
+            <div class="infor">
+              <h3>Johnny Joestar Theme</h3>
+              <p>Samuel Kim</p>
+            </div>
+          </div>
         </div>
         <br />
         <h3>Popular Artists</h3>
         <div class="pArt">
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-        </div>
-        <br />
-        <h3>Popular Albums</h3>
-        <div class="pAlbums">
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
-          <div class="song"></div>
+          <div class="art play">
+            <img class="img-circle" src="Images/a1.jpeg" alt="" />
+            <div class="infor">
+              <h3>Pritam</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="art play">
+            <img class="img-circle" src="Images/a2.jpeg" alt="" />
+            <div class="infor">
+              <h3>A.R. Rahman</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="art play">
+            <img class="img-circle" src="Images/a3.jpeg" alt="" />
+            <div class="infor">
+              <h3>Arijit Singh</h3>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="art play">
+            <img class="img-circle" src="Images/a4.jpeg" alt="" />
+            <div class="infor">
+              <h3>Vishal-Sekhar</h3>
+              <p>The Artist</p>
+            </div>
+          </div>
+          <div class="art play">
+            <img class="img-circle" src="Images/a5.jpeg" alt="" />
+            <div class="infor">
+              <h3>Honey Singh</h3>
+              <p>Artists</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="playbar">
+      <div class="songinfo"></div>
+      <div class="songbuttons">
+        <img class="invert" src="Images/backward-step-svgrepo-com.svg" alt="" />
+        <img class="invert" src="Images/play-svgrepo-com.svg" alt="" />
+        <img class="invert" src="Images/forward-step-svgrepo-com.svg" alt="" />
+      </div>
+      <div class="songtime"></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
