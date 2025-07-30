@@ -13,6 +13,11 @@
           <div class="logo invert">
             <img src="Images/spot.svg" alt="" />
           </div>
+
+          <div class="mMenu invert">
+            <img id="menuImg" src="Images/menu-svgrepo-com.svg" alt="" />
+          </div>
+
           <div class="home invert">
             <img src="Images/home.svg" alt="" />
           </div>
@@ -64,7 +69,7 @@
       <div class="mPage">
         <h3>Trending Songs</h3>
         <div class="trSongs">
-          <div class="song play">
+          <div class="song playc">
             <img src="Images/s1.jpeg" alt="" />
             <div class="infor">
               <h3>Best Day of My Life</h3>
@@ -74,85 +79,133 @@
               <img src="Images/play.svg" alt="" />
             </div>
           </div>
-          <div class="song play">
+          <div class="song playc">
             <img src="Images/s2.jpeg" alt="" />
             <div class="infor">
               <h3>Sanu Kehndi</h3>
               <p>Romy, Kumaar</p>
             </div>
+            <div class="playButton">
+              <img src="Images/play.svg" alt="" />
+            </div>
           </div>
-          <div class="song play">
+          <div class="song playc">
             <img src="Images/s3.jpeg" alt="" />
             <div class="infor">
               <h3>Sapphire</h3>
               <p>Ed Sheeran</p>
             </div>
+            <div class="playButton">
+              <img src="Images/play.svg" alt="" />
+            </div>
           </div>
-          <div class="song play">
+          <div class="song playc">
             <img src="Images/s4.jpeg" alt="" />
             <div class="infor">
               <h3>I Think They Call This Love</h3>
               <p>Elliot James Reay</p>
             </div>
+            <div class="playButton">
+              <img src="Images/play.svg" alt="" />
+            </div>
           </div>
-          <div class="song play">
+          <div class="song playc">
             <img src="Images/s5.jpeg" alt="" />
             <div class="infor">
               <h3>Johnny Joestar Theme</h3>
               <p>Samuel Kim</p>
+            </div>
+            <div class="playButton">
+              <img src="Images/play.svg" alt="" />
             </div>
           </div>
         </div>
         <br />
         <h3>Popular Artists</h3>
         <div class="pArt">
-          <div class="art play">
+          <div class="art playc">
             <img class="img-circle" src="Images/a1.jpeg" alt="" />
             <div class="infor">
               <h3>Pritam</h3>
               <p>Artist</p>
+              <div class="playButton">
+                <img src="Images/play.svg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="art play">
+          <div class="art playc">
             <img class="img-circle" src="Images/a2.jpeg" alt="" />
             <div class="infor">
               <h3>A.R. Rahman</h3>
               <p>Artist</p>
+              <div class="playButton">
+                <img src="Images/play.svg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="art play">
+          <div class="art playc">
             <img class="img-circle" src="Images/a3.jpeg" alt="" />
             <div class="infor">
               <h3>Arijit Singh</h3>
               <p>Artist</p>
+              <div class="playButton">
+                <img src="Images/play.svg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="art play">
+          <div class="art playc">
             <img class="img-circle" src="Images/a4.jpeg" alt="" />
             <div class="infor">
               <h3>Vishal-Sekhar</h3>
               <p>The Artist</p>
+              <div class="playButton">
+                <img src="Images/play.svg" alt="" />
+              </div>
             </div>
           </div>
-          <div class="art play">
+          <div class="art playc">
             <img class="img-circle" src="Images/a5.jpeg" alt="" />
             <div class="infor">
               <h3>Honey Singh</h3>
               <p>Artists</p>
+              <div class="playButton">
+                <img src="Images/play.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="playbar">
-      <div class="songinfo"></div>
+      <div class="songInfo"></div>
       <div class="songbuttons">
-        <img class="invert" src="Images/backward-step-svgrepo-com.svg" alt="" />
-        <img class="invert" src="Images/play-svgrepo-com.svg" alt="" />
-        <img class="invert" src="Images/forward-step-svgrepo-com.svg" alt="" />
+        <img
+          class="invert"
+          id="prev"
+          src="Images/backward-step-svgrepo-com.svg"
+          alt=""
+        />
+        <img
+          class="invert"
+          id="play"
+          src="Images/play-svgrepo-com.svg"
+          alt=""
+        />
+        <img
+          class="invert"
+          id="next"
+          src="Images/forward-step-svgrepo-com.svg"
+          alt=""
+        />
       </div>
-      <div class="songtime"></div>
+      <div class="songTime"></div>
+      <div class="seekbar">
+        <div class="circle"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+<!-- <audio controls>
+                  <source src = ${"songs/" + song} type ="audio/mpeg"> -->
+<!-- it is used to get audio -->

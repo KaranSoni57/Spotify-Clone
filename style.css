@@ -23,21 +23,22 @@ body {
   gap: 25px;
   align-items: center;
 }
-.logo {
+.logo,
+.home,
+.mMenu {
   border-radius: 50px;
   height: 40px;
   width: 40px;
-  overflow: hidden;
 }
-.logo > img {
+.logo > img,
+.mMenu > img {
   object-fit: cover;
   height: 100%;
 }
-.home {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
+.mMenu {
+  display: none;
 }
+
 .home:hover {
   transform: scale(110%);
   transition-duration: 0.3s;
@@ -107,16 +108,14 @@ body {
   color: white;
   border-radius: 5px;
   padding: 18px;
-  max-height: 80vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none;
+  z-index: 1;
+  height: 100%;
 }
 .mPage {
   background-color: rgb(18, 18, 18);
   width: 70vw;
   border-radius: 5px;
-  max-height: 90vh;
+  margin: 0 15px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -193,14 +192,25 @@ body {
   display: flex;
   gap: 30px;
   margin: 30px;
-  width: 100%;
+
   margin-top: -10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .song {
   width: 175px;
   height: 270px;
+  --a: 0;
   position: relative;
   border-radius: 5px;
+}
+.song:hover,
+.art:hover {
+  background-color: rgb(30, 30, 30);
+  transition-duration: 0.3s;
+
+  --a: 1;
+  cursor: pointer;
 }
 .song > img {
   width: 155px;
@@ -217,7 +227,10 @@ body {
   gap: 30px;
   margin: 30px;
   margin-top: -10px;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
+
 .img-circle {
   width: 155px;
   height: 155px;
@@ -228,16 +241,16 @@ body {
 .art {
   width: 175px;
   height: 270px;
+  --a: 0;
   position: relative;
   border-radius: 5px;
 }
 .invert {
   filter: invert(1);
 }
-.play:hover {
-  background-color: rgb(30, 30, 30);
-  transition-duration: 0.3s;
-}
+/* .playc:hover {
+  
+} */
 .playButton {
   width: 40px;
   height: 40px;
@@ -246,17 +259,24 @@ body {
   position: absolute;
   bottom: 110px;
   left: 120px;
-  opacity: 0%;
+  opacity: var(--a);
+  transition: 0.5s ease-in;
+  justify-content: center;
+  align-items: center;
+}
+.playButton img {
+  width: 30px;
+  margin: 5px;
 }
 .playbar {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: rgb(34, 34, 34);
   width: 100%;
   height: 7vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .songbuttons {
   max-height: 15vh;
@@ -264,18 +284,20 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: fixed;
 }
 .songbuttons > img {
-  width: 40px;
+  width: 30px;
   color: white;
+  cursor: pointer;
 }
 .songList ul {
   padding: 30px;
   padding-left: 0px;
   overflow-y: scroll;
   overflow-x: hidden;
+  max-height: 50vh;
   scrollbar-width: none;
-  height: 90vh;
 }
 .songList ul li {
   list-style-type: decimal;
@@ -292,4 +314,115 @@ body {
 }
 .songList li img {
   width: 20px;
+}
+.seekbar {
+  background: white;
+  width: 20%;
+  height: 3px;
+  border-radius: 10px;
+  position: fixed;
+  right: 50px;
+  cursor: pointer;
+}
+.circle {
+  background: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 4px;
+  left: 0%;
+  transition: left 0.5s;
+}
+.songTime {
+  position: fixed;
+  right: 360px;
+}
+.songInfo {
+  position: fixed;
+  left: 50px;
+}
+
+@media (max-width: 1250px) {
+  .mPage {
+    width: 100vw;
+    height: 100vh;
+  }
+  .library {
+    position: absolute;
+    left: -200%;
+    max-width: 270px;
+    background-color: black;
+  }
+  .playlist {
+    min-width: 25vw;
+  }
+  .xtras > p {
+    display: none;
+  }
+  .songTime {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .logo,
+  .home,
+  .seekbar,
+  #prev,
+  #next {
+    display: none;
+  }
+  .songbuttons,
+  .songInfo {
+    position: relative;
+  }
+  .mMenu {
+    display: block;
+  }
+}
+.search,
+.searchbox {
+  width: 200px;
+}
+
+@media (max-width: 450px) {
+  .search,
+  .searchbox {
+    display: none;
+  }
+  .song,
+  .art {
+    width: 130px;
+    height: 220px;
+  }
+  .song > img,
+  .art > img {
+    width: 110px;
+    height: 110px;
+  }
+  .infor {
+    font-size: 12px;
+  }
+  .mPage {
+    margin: 0;
+    border-radius: 0;
+  }
+  .songInfo {
+    width: 170px;
+  }
+  .playbar {
+    justify-content: space-between;
+  }
+  .playlist {
+    display: none;
+  }
+  .songList ul li {
+    font-size: 12px;
+    height: 50px;
+    width: 110px;
+    margin: 10px 0;
+  }
+  .songList ul li img {
+    display: none;
+  }
 }
